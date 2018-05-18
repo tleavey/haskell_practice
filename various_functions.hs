@@ -84,6 +84,7 @@ my_last (_:lst) = my_last lst
 my_last [] = error "No last number in an empty list!"
 
 -- Returns True or False depending if a leap year was entered
+-- Special condition is that 100 years is not a leap year, but every 400 years is a leap year. 
 is_leap :: Integral a => a -> Bool
 is_leap year =
     if (year `mod` 4 == 0) && not (year `mod` 100 == 0)
